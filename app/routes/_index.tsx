@@ -1,8 +1,9 @@
 import type { V2_MetaFunction } from "@remix-run/node";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "~/components/ui/card";
 
 export const meta: V2_MetaFunction = () => {
   return [
-    { title: "New Remix App" },
+    { title: "Mixstack with Remix" },
     { name: "description", content: "Welcome to Remix!" },
   ];
 };
@@ -36,6 +37,19 @@ export default function Index() {
           </a>
         </li>
       </ul>
+      <Card>
+        <CardHeader>
+          <CardTitle>Card Title</CardTitle>
+          <CardDescription>Card Description</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <p>Card Content</p>
+        </CardContent>
+        <CardFooter>
+          <p>Card Footer</p>
+        </CardFooter>
+      </Card>
+
     </div>
   );
 }
